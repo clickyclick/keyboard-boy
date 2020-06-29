@@ -5,11 +5,10 @@ import sys
 serverPort = 1024 #TCP port we will listen on
 
 #setup TCP socket
-serverSocket = socket(AF_INET,SOCK_STREAM)
-serverSocket.bind(('', serverPort))
-
-serverSocket.listen(1)
+udpSocket = socket(AF_INET,SOCK_DGRAM)
+udpSocket.bind(('', serverPort))
 
 while True:
-    connectionSocket, addr = serverSocket.accept()
-    message = connectionSocket.recv(1024).decode()
+    #connectionSocket, addr = serverSocket.accept()
+    message = udpSocket.recv(2048).decode()
+    print(message)
