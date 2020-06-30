@@ -10,7 +10,7 @@ keyCount = 0
 keys = []
 
 #command line input variables
-hostName = "localhost" # sys.argv[1]
+hostName = "35.202.167.184" # sys.argv[1]
 serverPort = 1024 # int(sys.argv[2])
 
 #setup socket
